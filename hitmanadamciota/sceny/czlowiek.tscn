@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://vix777yce7s6"]
+
+[ext_resource type="Script" uid="uid://c66bw55fb3msa" path="res://skrypty/czlowiek.gd" id="1_tinmx"]
+[ext_resource type="Script" uid="uid://bvltq2appvwp3" path="res://skrypty/dzieckoo.gd" id="2_sn8tt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xoq6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoq6y"]
+size = Vector2(40, 40)
+
+[node name="czlowiek" type="ColorRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0.30588236, 1, 1)
+script = ExtResource("1_tinmx")
+
+[node name="dzieckoo" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(3.1284987e-06, 0.4954542, 0.49717158, 1)
+script = ExtResource("2_sn8tt")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." groups=["czlowiek"]]
+physics_material_override = SubResource("PhysicsMaterial_xoq6y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_xoq6y")
