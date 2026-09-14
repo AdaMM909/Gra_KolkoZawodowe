@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4kynmttb4qw0"]
+
+[ext_resource type="Script" uid="uid://6u5k3for0akk" path="res://sceny/h_slider.gd" id="1_6frub"]
+
+[node name="Node2D" type="Node2D" unique_id=1600257110]
+
+[node name="HSlider" type="HSlider" parent="." unique_id=2110123010]
+offset_left = 549.0
+offset_top = 100.0
+offset_right = 1035.0
+offset_bottom = 326.0
+min_value = 0.01
+value = 0.01
+script = ExtResource("1_6frub")
+
+[connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]
