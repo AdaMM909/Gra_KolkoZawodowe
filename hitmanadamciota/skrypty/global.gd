@@ -6,6 +6,7 @@ var drzwi = false
 var zabijint = Label.new()
 var sigma
 var atak
+var dialog_text
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var canvas = CanvasLayer.new() # Tworzymy warstwe interfejsu (UI)
