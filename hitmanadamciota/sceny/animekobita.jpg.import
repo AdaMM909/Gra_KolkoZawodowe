@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vhsnvmlrdmeh"
-path="res://.godot/imported/images.jpg-cf85b31f390045eb8fc98f605a7d5bd2.ctex"
+path="res://.godot/imported/animekobita.jpg-f5b6dfcc6cc6bccb6758d6b2887f22f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sceny/images.jpg"
-dest_files=["res://.godot/imported/images.jpg-cf85b31f390045eb8fc98f605a7d5bd2.ctex"]
+source_file="res://sceny/animekobita.jpg"
+dest_files=["res://.godot/imported/animekobita.jpg-f5b6dfcc6cc6bccb6758d6b2887f22f2.ctex"]
 
 [params]
 

@@ -1,8 +1,12 @@
 extends Label
-var dialogi = Label.new()
-@onready var label: Label = $Label
-var x = "adam nie badz smutny"
 
+
+var x = "adam nie badz smutny"
+@onready var dialogi: Label = $Label
+@onready var zdjdial: Sprite2D = $Sprite2D
+const ANIMEKOBITA = preload("uid://vhsnvmlrdmeh")
+
+"res://sceny/animekobita.jpg"
 
 
 
@@ -10,14 +14,14 @@ var x = "adam nie badz smutny"
 func _ready() -> void:
 	var canvas = CanvasLayer.new()
 	add_child(canvas)
-	canvas.add_child(dialogi)
-	dialogi.text = x
-	dialogi.add_theme_font_size_override("font_size", 48)
-	dialogi.position = Vector2(200, 400)
-	dialogi.hide()
+	canvas.add_child(self)
+	self.text = x
+	self.add_theme_font_size_override("font_size", 48)
+	self.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("startdial"):
-		dialogi.show()
+		zdjdial.texture = load("res://sceny/animekobita.jpg")
+		self.show()
