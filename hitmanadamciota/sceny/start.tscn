@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bin12enohoyak"]
+[gd_scene load_steps=6 format=3 uid="uid://bin12enohoyak"]
 
 [ext_resource type="Script" uid="uid://bslgf1yrpt50b" path="res://skrypty/button.gd" id="1_qxeev"]
 [ext_resource type="Texture2D" uid="uid://wyelpvqice4o" path="res://logo.png" id="2_51das"]
@@ -8,28 +8,29 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cqs6"]
 bg_color = Color(0.00045849354, 0.27176863, 0.86689824, 1)
 
-[node name="Node2D" type="Node2D" unique_id=865384771]
+[node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=712742963]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(0, -140)
 scale = Vector2(0.78811055, 0.7118421)
 texture = ExtResource("2_51das")
 
-[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=851360562]
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
 position = Vector2(-4, 4)
 
-[node name="setignsy" type="Button" parent="." unique_id=299650933]
+[node name="setignsy" type="Button" parent="."]
 offset_left = -72.0
 offset_top = 67.0
 offset_right = 94.0
 offset_bottom = 98.0
 theme_override_colors/font_color = Color(0.97332746, 0.8592982, 0.3535178, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
-text = "Ustawienia"
+text = "settingsy"
 script = ExtResource("2_y5yvk")
+gdzie = "settings"
 
-[node name="start" type="Button" parent="." unique_id=1967131686]
+[node name="start" type="Button" parent="."]
 offset_left = -317.0
 offset_top = 65.0
 offset_right = -151.0
@@ -40,7 +41,7 @@ text = "Start"
 script = ExtResource("1_qxeev")
 gdzie = "dwor"
 
-[node name="Wyjdz" type="Button" parent="." unique_id=78750483]
+[node name="Wyjdz" type="Button" parent="."]
 offset_left = 191.0
 offset_top = 69.0
 offset_right = 357.0
