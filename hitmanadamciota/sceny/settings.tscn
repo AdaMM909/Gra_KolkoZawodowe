@@ -1,16 +1,77 @@
 [gd_scene format=3 uid="uid://c4kynmttb4qw0"]
 
 [ext_resource type="Script" uid="uid://6u5k3for0akk" path="res://sceny/h_slider.gd" id="1_6frub"]
+[ext_resource type="FontFile" uid="uid://chmiwx22k8enq" path="res://assety/font/LazyFox Pixel Font 2/LazyFox Pixel Font 2.ttf" id="2_vwmaw"]
+[ext_resource type="Script" uid="uid://bo1vn6m64w2uj" path="res://sceny/sfx.gd" id="3_iesni"]
+[ext_resource type="Script" uid="uid://brvw01bsknjyb" path="res://sceny/wyjdz.gd" id="4_fj41q"]
+
+[sub_resource type="Theme" id="Theme_g4v7s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgf43"]
+bg_color = Color(0.00045849354, 0.27176863, 0.86689824, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1600257110]
 
-[node name="HSlider" type="HSlider" parent="." unique_id=2110123010]
-offset_left = 549.0
-offset_top = 100.0
-offset_right = 1035.0
-offset_bottom = 326.0
-min_value = 0.01
-value = 0.01
+[node name="muzyka" type="HSlider" parent="." unique_id=2110123010]
+offset_left = 110.0
+offset_top = 105.0
+offset_right = 596.0
+offset_bottom = 331.0
+max_value = 1.0
+step = 0.001
 script = ExtResource("1_6frub")
+ktora = "muzyka"
 
-[connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]
+[node name="Label" type="Label" parent="muzyka" unique_id=1040103468]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 5.0
+offset_right = 350.0
+offset_bottom = 92.0
+theme = SubResource("Theme_g4v7s")
+theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
+theme_override_fonts/font = ExtResource("2_vwmaw")
+theme_override_font_sizes/font_size = 59
+text = "Muzyka"
+
+[node name="sfx" type="HSlider" parent="." unique_id=1673514641]
+offset_left = 109.0
+offset_top = 394.0
+offset_right = 595.0
+offset_bottom = 620.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_iesni")
+ktora = "sfx"
+
+[node name="Label" type="Label" parent="sfx" unique_id=21273566]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 5.0
+offset_right = 417.0
+offset_bottom = 92.0
+theme = SubResource("Theme_g4v7s")
+theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
+theme_override_fonts/font = ExtResource("2_vwmaw")
+theme_override_font_sizes/font_size = 59
+text = "SFX"
+
+[node name="Wyjdz" type="Button" parent="." unique_id=672908871]
+offset_left = 561.0
+offset_top = 592.0
+offset_right = 1003.0
+offset_bottom = 683.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.09019608, 1)
+theme_override_fonts/font = ExtResource("2_vwmaw")
+theme_override_font_sizes/font_size = 57
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgf43")
+text = "Wyjdz"
+script = ExtResource("4_fj41q")
+
+[connection signal="value_changed" from="muzyka" to="muzyka" method="_on_value_changed"]
+[connection signal="value_changed" from="sfx" to="sfx" method="_on_value_changed"]
+[connection signal="mouse_entered" from="Wyjdz" to="Wyjdz" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Wyjdz" to="Wyjdz" method="_on_mouse_exited"]
+[connection signal="pressed" from="Wyjdz" to="Wyjdz" method="_on_pressed"]
