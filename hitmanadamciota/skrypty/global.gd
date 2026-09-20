@@ -15,6 +15,7 @@ func _ready() -> void:
 	add_child(canvasmierc)
 	canvas.add_child(drzwiint)
 	canvasmierc.add_child(zabijint) # Label wrzucamy do CanvasLayer!
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	drzwiint.text = "kliknij e zeby wejsc"
 	drzwiint.position = Vector2(800, 400)
@@ -25,6 +26,7 @@ func _ready() -> void:
 	zabijint.position = Vector2(800, 400)
 	zabijint.add_theme_font_size_override("font_size", 48)
 	zabijint.hide()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

@@ -1,22 +1,26 @@
 [gd_scene format=3 uid="uid://c4kynmttb4qw0"]
 
 [ext_resource type="Script" uid="uid://6u5k3for0akk" path="res://sceny/h_slider.gd" id="1_6frub"]
+[ext_resource type="Script" uid="uid://do771y82i0us6" path="res://sceny/settings.gd" id="1_fj41q"]
 [ext_resource type="FontFile" uid="uid://chmiwx22k8enq" path="res://assety/font/LazyFox Pixel Font 2/LazyFox Pixel Font 2.ttf" id="2_vwmaw"]
 [ext_resource type="Script" uid="uid://bo1vn6m64w2uj" path="res://sceny/sfx.gd" id="3_iesni"]
 [ext_resource type="Script" uid="uid://brvw01bsknjyb" path="res://sceny/wyjdz.gd" id="4_fj41q"]
+[ext_resource type="AudioStream" uid="uid://1s8nj1xaj5td" path="res://dzwieki/Project_13.mp3" id="5_iesni"]
 
 [sub_resource type="Theme" id="Theme_g4v7s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgf43"]
 bg_color = Color(0.00045849354, 0.27176863, 0.86689824, 1)
 
-[node name="Node2D" type="Node2D" unique_id=1600257110]
+[node name="Node2D" type="CanvasLayer" unique_id=1630793323]
+process_mode = 2
+script = ExtResource("1_fj41q")
 
 [node name="muzyka" type="HSlider" parent="." unique_id=2110123010]
-offset_left = 110.0
-offset_top = 105.0
-offset_right = 596.0
-offset_bottom = 331.0
+offset_left = 96.0
+offset_top = 110.0
+offset_right = 589.0
+offset_bottom = 336.0
 max_value = 1.0
 step = 0.001
 script = ExtResource("1_6frub")
@@ -69,6 +73,12 @@ theme_override_font_sizes/font_size = 57
 theme_override_styles/normal = SubResource("StyleBoxFlat_qgf43")
 text = "Wyjdz"
 script = ExtResource("4_fj41q")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=915258948]
+stream = ExtResource("5_iesni")
+volume_db = 24.0
+autoplay = true
+bus = &"muzyka"
 
 [connection signal="value_changed" from="muzyka" to="muzyka" method="_on_value_changed"]
 [connection signal="value_changed" from="sfx" to="sfx" method="_on_value_changed"]

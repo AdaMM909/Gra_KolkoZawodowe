@@ -1,25 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://bin12enohoyak"]
+[gd_scene format=3 uid="uid://bin12enohoyak"]
 
 [ext_resource type="Script" uid="uid://bslgf1yrpt50b" path="res://skrypty/button.gd" id="1_qxeev"]
 [ext_resource type="Texture2D" uid="uid://wyelpvqice4o" path="res://logo.png" id="2_51das"]
 [ext_resource type="Script" uid="uid://rht34hmunqje" path="res://sceny/setignsy.gd" id="2_y5yvk"]
 [ext_resource type="Script" uid="uid://brvw01bsknjyb" path="res://sceny/wyjdz.gd" id="3_5cqs6"]
+[ext_resource type="AudioStream" uid="uid://devr8r2ryadst" path="res://file_example_MP3_5MG.mp3" id="5_uaagf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cqs6"]
 bg_color = Color(0.00045849354, 0.27176863, 0.86689824, 1)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1095889673]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1803712391]
 z_index = -1
 position = Vector2(0, -140)
 scale = Vector2(0.78811055, 0.7118421)
 texture = ExtResource("2_51das")
 
-[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=567805330]
 position = Vector2(-4, 4)
 
-[node name="setignsy" type="Button" parent="."]
+[node name="setignsy" type="Button" parent="." unique_id=986137740]
 offset_left = -72.0
 offset_top = 67.0
 offset_right = 94.0
@@ -30,7 +31,7 @@ text = "settingsy"
 script = ExtResource("2_y5yvk")
 gdzie = "settings"
 
-[node name="start" type="Button" parent="."]
+[node name="start" type="Button" parent="." unique_id=6733401]
 offset_left = -317.0
 offset_top = 65.0
 offset_right = -151.0
@@ -41,7 +42,7 @@ text = "Start"
 script = ExtResource("1_qxeev")
 gdzie = "dwor"
 
-[node name="Wyjdz" type="Button" parent="."]
+[node name="Wyjdz" type="Button" parent="." unique_id=1339135218]
 offset_left = 191.0
 offset_top = 69.0
 offset_right = 357.0
@@ -50,6 +51,12 @@ theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.09019608, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
 text = "Wyjdz"
 script = ExtResource("3_5cqs6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=442136144]
+stream = ExtResource("5_uaagf")
+volume_db = 24.0
+autoplay = true
+bus = &"muzyka"
 
 [connection signal="mouse_entered" from="setignsy" to="setignsy" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="setignsy" to="setignsy" method="_on_mouse_exited"]
