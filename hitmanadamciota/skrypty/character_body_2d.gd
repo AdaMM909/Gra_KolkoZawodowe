@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED 
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("ui_downppp"):
 		postac.global_position.y += SPEED * delta
 	if Input.is_action_pressed("ui_up"):
 		postac.global_position.y -= SPEED * delta
