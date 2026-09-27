@@ -29,7 +29,6 @@ theme_override_colors/font_color = Color(0.97332746, 0.8592982, 0.3535178, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
 text = "settingsy"
 script = ExtResource("2_y5yvk")
-gdzie = "settings"
 
 [node name="start" type="Button" parent="." unique_id=6733401]
 offset_left = -317.0

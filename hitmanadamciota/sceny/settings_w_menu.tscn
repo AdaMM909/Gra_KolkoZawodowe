@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://c337ao712o5bc"]
+
+[ext_resource type="Script" uid="uid://cw2q3gnnln5vg" path="res://sceny/settings_w_menu.gd" id="1_w6pue"]
+[ext_resource type="Script" uid="uid://6u5k3for0akk" path="res://sceny/h_slider.gd" id="2_xnq6e"]
+[ext_resource type="FontFile" uid="uid://chmiwx22k8enq" path="res://assety/font/LazyFox Pixel Font 2/LazyFox Pixel Font 2.ttf" id="3_730b6"]
+[ext_resource type="Script" uid="uid://bo1vn6m64w2uj" path="res://sceny/sfx.gd" id="4_kay7s"]
+[ext_resource type="AudioStream" uid="uid://1s8nj1xaj5td" path="res://dzwieki/Project_13.mp3" id="5_ckl8r"]
+[ext_resource type="Texture2D" uid="uid://b4wjl76ew6l2r" path="res://assety/kenney_cursor-pack/Vector/Basic/arrow_w.svg" id="6_730b6"]
+[ext_resource type="Script" uid="uid://law57mu30qk3" path="res://sceny/button.gd" id="6_xnq6e"]
+
+[sub_resource type="Theme" id="Theme_g4v7s"]
+
+[node name="Node2D" type="CanvasLayer" unique_id=1630793323]
+script = ExtResource("1_w6pue")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1188996855]
+modulate = Color(0, 0.47058824, 0.78431374, 0.16862746)
+offset_right = 1599.0
+offset_bottom = 699.0
+color = Color(1, 1, 1, 0.40784314)
+
+[node name="muzyka" type="HSlider" parent="." unique_id=2110123010]
+offset_left = 162.0
+offset_top = 232.0
+offset_right = 655.0
+offset_bottom = 458.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_xnq6e")
+ktora = "muzyka"
+
+[node name="Label" type="Label" parent="muzyka" unique_id=1040103468]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 5.0
+offset_right = 350.0
+offset_bottom = 92.0
+theme = SubResource("Theme_g4v7s")
+theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
+theme_override_fonts/font = ExtResource("3_730b6")
+theme_override_font_sizes/font_size = 59
+text = "Muzyka"
+metadata/_edit_use_anchors_ = true
+
+[node name="sfx" type="HSlider" parent="." unique_id=1673514641]
+offset_left = 950.0
+offset_top = 232.0
+offset_right = 1436.0
+offset_bottom = 458.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_kay7s")
+
+[node name="Label" type="Label" parent="sfx" unique_id=21273566]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 8.0
+offset_right = 428.0
+offset_bottom = 95.0
+theme = SubResource("Theme_g4v7s")
+theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
+theme_override_fonts/font = ExtResource("3_730b6")
+theme_override_font_sizes/font_size = 59
+text = "SFX"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=915258948]
+stream = ExtResource("5_ckl8r")
+volume_db = 24.0
+autoplay = true
+bus = &"muzyka"
+
+[node name="Button" type="Button" parent="." unique_id=1730022633]
+offset_left = 626.0
+offset_top = 514.0
+offset_right = 954.0
+offset_bottom = 650.0
+theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.9764706)
+theme_override_fonts/font = ExtResource("3_730b6")
+theme_override_font_sizes/font_size = 59
+text = "Wyjdz"
+icon = ExtResource("6_730b6")
+expand_icon = true
+script = ExtResource("6_xnq6e")
+
+[node name="Label2" type="Label" parent="." unique_id=1405515312]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -177.0
+offset_top = 93.0
+offset_right = 178.0
+offset_bottom = 180.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_g4v7s")
+theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
+theme_override_fonts/font = ExtResource("3_730b6")
+theme_override_font_sizes/font_size = 59
+text = "Ustawienia"
+
+[connection signal="value_changed" from="muzyka" to="muzyka" method="_on_value_changed"]
+[connection signal="value_changed" from="sfx" to="sfx" method="_on_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

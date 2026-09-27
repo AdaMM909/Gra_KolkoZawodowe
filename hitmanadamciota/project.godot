@@ -27,7 +27,6 @@ buses/default_bus_layout="uid://berrn52lpj4io"
 
 Global="*res://skrypty/global.gd"
 Muzyka="*res://sceny/muzyka.tscn"
-Settings="*uid://c4kynmttb4qw0"
 
 [display]
 
