@@ -5,17 +5,12 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	hide()
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		toggle_settings()
-
-func toggle_settings() -> void:
-	if visible:
-		get_tree().paused = false
-		hide()
-	else:
+func _process(delta: float) -> void:
+	if Global.setingsy == true:
 		get_tree().paused = true
 		show()
-
-func _on_resume_button_pressed() -> void:
-	toggle_settings()
+		if Input.is_action_just_released("ui_down") and Global.setingsy == true:
+			Global.setingsy = false
+	else:
+		get_tree().paused = false
+		hide()
