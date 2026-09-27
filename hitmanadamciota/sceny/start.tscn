@@ -51,11 +51,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
 text = "Wyjdz"
 script = ExtResource("3_5cqs6")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=442136144]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=571119771]
 stream = ExtResource("5_uaagf")
 volume_db = 24.0
 autoplay = true
-bus = &"muzyka"
 
 [connection signal="mouse_entered" from="setignsy" to="setignsy" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="setignsy" to="setignsy" method="_on_mouse_exited"]
