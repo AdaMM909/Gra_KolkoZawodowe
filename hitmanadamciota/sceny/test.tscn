@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dhs6g04jx4rmh"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1387636499]
+
+[node name="Label" type="Label" parent="." unique_id=1059853594]
+offset_right = 678.0
+offset_bottom = 261.0
+text = "adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf
+
+adfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdfadfsdf"

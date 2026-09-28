@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4kynmttb4qw0"]
+[gd_scene format=3 uid="uid://c4kynmttb4qw0"]
 
 [ext_resource type="Script" uid="uid://6u5k3for0akk" path="res://sceny/h_slider.gd" id="1_6frub"]
 [ext_resource type="Script" uid="uid://do771y82i0us6" path="res://sceny/settings.gd" id="1_fj41q"]
@@ -7,20 +7,20 @@
 
 [sub_resource type="Theme" id="Theme_g4v7s"]
 
-[node name="Node2D" type="CanvasLayer"]
-process_mode = 2
+[node name="Node2D" type="CanvasLayer" unique_id=2057626937]
+process_mode = 3
 layer = 100
 script = ExtResource("1_fj41q")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=385568620]
 color = Color(0.17254902, 0.17254902, 0.17254902, 0.20392157)
 polygon = PackedVector2Array(157, 127, 1799, 123, 1803, 920, 153, 917)
 
-[node name="Polygon2D2" type="Polygon2D" parent="."]
+[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1684578094]
 color = Color(0.09239701, 0.09239709, 0.09239703, 0.20392157)
 polygon = PackedVector2Array(280, 264, 1733, 267, 1737, 818, 252, 807)
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1999375950]
 anchors_preset = -1
 anchor_right = 1.2
 anchor_bottom = 1.5430001
@@ -29,21 +29,23 @@ offset_bottom = -586.44006
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.65834004, 0.6583399, 0.6583399, 0.05882353)
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=911471593]
 process_mode = 3
 offset_left = 794.0
 offset_top = 328.0
 offset_right = 1149.0
 offset_bottom = 415.0
 theme = SubResource("Theme_g4v7s")
-theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_color = Color(0.9741314, 0.7525923, 0.9784407, 1)
 theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
 theme_override_fonts/font = ExtResource("2_vwmaw")
 theme_override_font_sizes/font_size = 59
 text = "Ustawienia"
+metadata/_edit_use_anchors_ = true
 
-[node name="muzyka" type="HSlider" parent="."]
+[node name="muzyka" type="HSlider" parent="." unique_id=2015415539]
 offset_left = 309.0
 offset_top = 468.0
 offset_right = 802.0
@@ -52,21 +54,23 @@ max_value = 1.0
 step = 0.001
 script = ExtResource("1_6frub")
 ktora = "muzyka"
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="muzyka"]
+[node name="Label" type="Label" parent="muzyka" unique_id=65817032]
 layout_mode = 0
 offset_left = 105.0
 offset_top = 5.0
 offset_right = 350.0
 offset_bottom = 92.0
 theme = SubResource("Theme_g4v7s")
-theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_color = Color(0.972549, 0.7529412, 0.98039216, 1)
 theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
 theme_override_fonts/font = ExtResource("2_vwmaw")
 theme_override_font_sizes/font_size = 59
 text = "Muzyka"
+metadata/_edit_use_anchors_ = true
 
-[node name="sfx" type="HSlider" parent="."]
+[node name="sfx" type="HSlider" parent="." unique_id=181150594]
 offset_left = 1160.0
 offset_top = 477.0
 offset_right = 1646.0
@@ -75,19 +79,21 @@ max_value = 1.0
 step = 0.001
 script = ExtResource("3_iesni")
 ktora = "sfx"
+metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="sfx"]
+[node name="Label" type="Label" parent="sfx" unique_id=1981169136]
 layout_mode = 0
 offset_left = 172.0
 offset_top = 5.0
 offset_right = 417.0
 offset_bottom = 92.0
 theme = SubResource("Theme_g4v7s")
-theme_override_colors/font_color = Color(1, 1, 0.3372549, 1)
+theme_override_colors/font_color = Color(0.972549, 0.7529412, 0.98039216, 1)
 theme_override_colors/font_outline_color = Color(0.13400343, 0.40500733, 0.29791012, 1)
 theme_override_fonts/font = ExtResource("2_vwmaw")
 theme_override_font_sizes/font_size = 59
 text = "SFX"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="value_changed" from="muzyka" to="muzyka" method="_on_value_changed"]
 [connection signal="value_changed" from="sfx" to="sfx" method="_on_value_changed"]
