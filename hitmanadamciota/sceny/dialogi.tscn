@@ -1,28 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://pb650vvdm6st"]
+[gd_scene format=3 uid="uid://pb650vvdm6st"]
 
 [ext_resource type="Script" uid="uid://3nbscvcttclu" path="res://sceny/dialogi.gd" id="1_5iosn"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1246557471]
 position = Vector2(422, 17)
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2023983836]
 offset_left = 12.0
 offset_top = 332.0
 offset_right = 814.0
 offset_bottom = 612.0
 color = Color(0.31061712, 0.31061712, 0.3106171, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=956293807]
 offset_left = 11.0
 offset_top = 332.0
 offset_right = 813.0
 offset_bottom = 615.0
 script = ExtResource("1_5iosn")
 
-[node name="Sprite2D" type="Sprite2D" parent="Label"]
+[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=242721239]
 position = Vector2(52, 206)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=215752890]
 z_index = -1
 offset_left = 6.0
 offset_top = 320.0

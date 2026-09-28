@@ -26,7 +26,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("startdial"): # wlacznik kodu
+	if Input.is_action_pressed("ui_down"): # wlacznik kodu
 		dialognumer = 1  # gostek ktory daje dialogowi znak ze ma byc 1
 	if dialognumer == 1: # sprawdza czy jest 1 
 		gadanko1() # wlacza gadanie 1
