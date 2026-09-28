@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bin12enohoyak"]
 
 [ext_resource type="Script" uid="uid://bslgf1yrpt50b" path="res://skrypty/button.gd" id="1_qxeev"]
-[ext_resource type="Texture2D" uid="uid://wyelpvqice4o" path="res://logo.png" id="2_51das"]
+[ext_resource type="Texture2D" uid="uid://dv25i747uo6lq" path="res://a.jpg" id="1_uaagf"]
 [ext_resource type="Script" uid="uid://rht34hmunqje" path="res://sceny/setignsy.gd" id="2_y5yvk"]
 [ext_resource type="Script" uid="uid://brvw01bsknjyb" path="res://sceny/wyjdz.gd" id="3_5cqs6"]
 [ext_resource type="AudioStream" uid="uid://devr8r2ryadst" path="res://file_example_MP3_5MG.mp3" id="5_uaagf"]
@@ -13,9 +13,9 @@ bg_color = Color(0.00045849354, 0.27176863, 0.86689824, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1803712391]
 z_index = -1
-position = Vector2(0, -140)
-scale = Vector2(0.78811055, 0.7118421)
-texture = ExtResource("2_51das")
+position = Vector2(0.9999981, -118)
+scale = Vector2(0.74268806, 0.67081535)
+texture = ExtResource("1_uaagf")
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=567805330]
 position = Vector2(-4, 4)
