@@ -3,20 +3,26 @@
 [ext_resource type="PackedScene" uid="uid://bgdt87byo3ogn" path="res://sceny/postac.tscn" id="1_04mt6"]
 [ext_resource type="PackedScene" uid="uid://b04n7wx6eyohu" path="res://sceny/drzwi.tscn" id="2_rrxpg"]
 [ext_resource type="PackedScene" uid="uid://vix777yce7s6" path="res://sceny/czlowiek.tscn" id="3_xrvr3"]
-[ext_resource type="AudioStream" uid="uid://71fon8apn5w0" path="res://dzwieki/Project_14.mp3" id="4_rrxpg"]
+[ext_resource type="AudioStream" uid="uid://1s8nj1xaj5td" path="res://dzwieki/Project_13.mp3" id="4_rrxpg"]
+[ext_resource type="Texture2D" uid="uid://28i3iydvsq5f" path="res://Mussolini_mezzobusto.jpg" id="5_xrvr3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_v30hc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1up1s"]
 size = Vector2(2097.5, 16)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yf5fn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(53, 50)
+
 [node name="Node2D" type="Node2D" unique_id=1719919488]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=593118278]
-offset_left = -1142.0
-offset_top = -1082.0
-offset_right = 922.0
-offset_bottom = 500.0
+offset_left = -1057.0
+offset_top = -1032.0
+offset_right = 1007.0
+offset_bottom = 550.0
 color = Color(0.18708575, 0.43197995, 0.25286427, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1263669366 instance=ExtResource("1_04mt6")]
@@ -94,7 +100,28 @@ offset_top = -289.0
 offset_right = -131.0
 offset_bottom = -249.0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=854553486]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1554782761]
 stream = ExtResource("4_rrxpg")
-volume_db = 24.0
+volume_db = 8.89
 autoplay = true
+
+[node name="MUSSOLINI" type="Sprite2D" parent="." unique_id=1427661817]
+position = Vector2(445, -683.99994)
+scale = Vector2(0.32108378, 0.22373706)
+texture = ExtResource("5_xrvr3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="MUSSOLINI" unique_id=965285097]
+position = Vector2(3095.9666, -28430.244)
+scale = Vector2(18.07547, 25.940002)
+physics_material_override = SubResource("PhysicsMaterial_yf5fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MUSSOLINI/StaticBody2D2" unique_id=1871392114]
+position = Vector2(-171.22, 1096)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Label" type="Label" parent="." unique_id=416946898]
+offset_left = 230.0
+offset_top = -858.0
+offset_right = 663.0
+offset_bottom = -838.0
+text = "Siema jestem mussolini ten co 67 niebieskie robi"
