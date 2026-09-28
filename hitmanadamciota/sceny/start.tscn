@@ -1,26 +1,55 @@
-[gd_scene load_steps=7 format=3 uid="uid://bin12enohoyak"]
+[gd_scene format=3 uid="uid://bin12enohoyak"]
 
 [ext_resource type="Script" uid="uid://bslgf1yrpt50b" path="res://skrypty/button.gd" id="1_qxeev"]
-[ext_resource type="Texture2D" uid="uid://dv25i747uo6lq" path="res://a.jpg" id="1_uaagf"]
+[ext_resource type="Texture2D" uid="uid://dyx8btpb4tdq1" path="res://assety/astery dating sim/Exports/HomeScreen/HomeScreenBackground.jpg" id="1_uaagf"]
 [ext_resource type="Script" uid="uid://rht34hmunqje" path="res://sceny/setignsy.gd" id="2_y5yvk"]
 [ext_resource type="Script" uid="uid://brvw01bsknjyb" path="res://sceny/wyjdz.gd" id="3_5cqs6"]
 [ext_resource type="AudioStream" uid="uid://devr8r2ryadst" path="res://file_example_MP3_5MG.mp3" id="5_uaagf"]
+[ext_resource type="Texture2D" uid="uid://2lxkrur1hugq" path="res://assety/astery dating sim/Exports/HomeScreen/Button.png" id="6_0s6g6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cqs6"]
-bg_color = Color(0.00045849354, 0.27176863, 0.86689824, 1)
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+shadow_color = Color(0, 0, 0, 0)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1217244718]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=554181157]
 z_index = -1
-position = Vector2(0.9999981, -118)
-scale = Vector2(0.74268806, 0.67081535)
+scale = Vector2(1.0018001, 0.9048521)
 texture = ExtResource("1_uaagf")
 
-[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=888487101]
 position = Vector2(-4, 4)
 
-[node name="setignsy" type="Button" parent="."]
+[node name="start" type="Button" parent="." unique_id=1219190618]
+z_index = 3
+offset_left = -399.0
+offset_top = 123.0
+offset_right = 238.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0.9585622, 0.77279156, 0.90650904, 1)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
+text = "Start"
+script = ExtResource("1_qxeev")
+gdzie = "dwor"
+
+[node name="Button" type="Sprite2D" parent="start" unique_id=1137501448]
+position = Vector2(-97, 198.00002)
+scale = Vector2(0.9060151, 0.906015)
+texture = ExtResource("6_0s6g6")
+
+[node name="setignsy" type="Button" parent="." unique_id=296029411]
 offset_left = -72.0
 offset_top = 67.0
 offset_right = 94.0
@@ -30,18 +59,12 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
 text = "settingsy"
 script = ExtResource("2_y5yvk")
 
-[node name="start" type="Button" parent="."]
-offset_left = -317.0
-offset_top = 65.0
-offset_right = -151.0
-offset_bottom = 96.0
-theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.09019608, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
-text = "Start"
-script = ExtResource("1_qxeev")
-gdzie = "dwor"
+[node name="Button" type="Sprite2D" parent="setignsy" unique_id=675805151]
+position = Vector2(-97, 198.00002)
+scale = Vector2(0.9060151, 0.906015)
+texture = ExtResource("6_0s6g6")
 
-[node name="Wyjdz" type="Button" parent="."]
+[node name="Wyjdz" type="Button" parent="." unique_id=569422560]
 offset_left = 191.0
 offset_top = 69.0
 offset_right = 357.0
@@ -51,18 +74,23 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
 text = "Wyjdz"
 script = ExtResource("3_5cqs6")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Button" type="Sprite2D" parent="Wyjdz" unique_id=824287207]
+position = Vector2(190, 230.00002)
+scale = Vector2(0.9060151, 0.906015)
+texture = ExtResource("6_0s6g6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1651861982]
 stream = ExtResource("5_uaagf")
 volume_db = 24.0
 autoplay = true
 bus = &"muzyka"
 
-[connection signal="mouse_entered" from="setignsy" to="setignsy" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="setignsy" to="setignsy" method="_on_mouse_exited"]
-[connection signal="pressed" from="setignsy" to="setignsy" method="_on_pressed"]
 [connection signal="mouse_entered" from="start" to="start" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="start" to="start" method="_on_mouse_exited"]
 [connection signal="pressed" from="start" to="start" method="_on_pressed"]
+[connection signal="mouse_entered" from="setignsy" to="setignsy" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="setignsy" to="setignsy" method="_on_mouse_exited"]
+[connection signal="pressed" from="setignsy" to="setignsy" method="_on_pressed"]
 [connection signal="mouse_entered" from="Wyjdz" to="Wyjdz" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Wyjdz" to="Wyjdz" method="_on_mouse_exited"]
 [connection signal="pressed" from="Wyjdz" to="Wyjdz" method="_on_pressed"]
