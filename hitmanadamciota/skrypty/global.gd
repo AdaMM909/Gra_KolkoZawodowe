@@ -7,8 +7,15 @@ var zabijint = Label.new()
 var sigma
 var atak
 var dialog_text
+const SETTINGS = preload("uid://c4kynmttb4qw0")
+
+
+
+var setingsy = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var instancja_settings = SETTINGS.instantiate()
+	add_child(instancja_settings)
 	var canvas = CanvasLayer.new() # Tworzymy warstwe interfejsu (UI)
 	add_child(canvas)
 	var canvasmierc = CanvasLayer.new() # Tworzymy warstwe interfejsu (UI)
@@ -29,7 +36,8 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_released("ui_cancel") and setingsy == false:
+		setingsy = true
 func _input(event):
 	pass
 func drzwitext():
@@ -42,3 +50,5 @@ func zabijtext():
 	
 func zabijtextusun():
 	zabijint.hide()
+
+	

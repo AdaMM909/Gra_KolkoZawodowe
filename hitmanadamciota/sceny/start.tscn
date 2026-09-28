@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bin12enohoyak"]
+[gd_scene load_steps=7 format=3 uid="uid://bin12enohoyak"]
 
 [ext_resource type="Script" uid="uid://bslgf1yrpt50b" path="res://skrypty/button.gd" id="1_qxeev"]
 [ext_resource type="Texture2D" uid="uid://dv25i747uo6lq" path="res://a.jpg" id="1_uaagf"]
@@ -9,18 +9,18 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cqs6"]
 bg_color = Color(0.00045849354, 0.27176863, 0.86689824, 1)
 
-[node name="Node2D" type="Node2D" unique_id=1095889673]
+[node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1803712391]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(0.9999981, -118)
 scale = Vector2(0.74268806, 0.67081535)
 texture = ExtResource("1_uaagf")
 
-[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=567805330]
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
 position = Vector2(-4, 4)
 
-[node name="setignsy" type="Button" parent="." unique_id=986137740]
+[node name="setignsy" type="Button" parent="."]
 offset_left = -72.0
 offset_top = 67.0
 offset_right = 94.0
@@ -29,9 +29,8 @@ theme_override_colors/font_color = Color(0.97332746, 0.8592982, 0.3535178, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
 text = "settingsy"
 script = ExtResource("2_y5yvk")
-gdzie = "settings"
 
-[node name="start" type="Button" parent="." unique_id=6733401]
+[node name="start" type="Button" parent="."]
 offset_left = -317.0
 offset_top = 65.0
 offset_right = -151.0
@@ -42,7 +41,7 @@ text = "Start"
 script = ExtResource("1_qxeev")
 gdzie = "dwor"
 
-[node name="Wyjdz" type="Button" parent="." unique_id=1339135218]
+[node name="Wyjdz" type="Button" parent="."]
 offset_left = 191.0
 offset_top = 69.0
 offset_right = 357.0
@@ -52,7 +51,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5cqs6")
 text = "Wyjdz"
 script = ExtResource("3_5cqs6")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=442136144]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_uaagf")
 volume_db = 24.0
 autoplay = true

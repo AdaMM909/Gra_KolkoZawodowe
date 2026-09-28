@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://cxpfm3s1kjvdj"]
+[gd_scene format=4 uid="uid://cxpfm3s1kjvdj"]
 
 [ext_resource type="Texture2D" uid="uid://c28k6083asfym" path="res://spirty/Zrzut ekranu 2026-08-02 070602.png" id="1_4g4no"]
 [ext_resource type="PackedScene" uid="uid://bgdt87byo3ogn" path="res://sceny/postac.tscn" id="2_ut5r5"]
+[ext_resource type="AudioStream" uid="uid://71fon8apn5w0" path="res://dzwieki/Project_14.mp3" id="3_ut5r5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_78l7i"]
 
@@ -37,15 +38,20 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_78l7i")
 sources/0 = SubResource("TileSetAtlasSource_12e14")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=787204767]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=158345560]
 position = Vector2(-61, -233.99997)
 scale = Vector2(5.771531, 2.97404)
 tile_map_data = PackedByteArray("AAAAAP//AAADAAEAAAAAAAAAAAADAAEAAAABAP//AAADAAEAAAACAP//AAADAAEAAAACAAAAAAANAAIAAAACAAEAAAANAAIAAAACAAIAAAANAAIAAAABAAIAAAADAAEAAAAAAAIAAAADAAEAAAD//wEAAAADAAEAAAD//wAAAAADAAEAAAABAAAAAAADAAEAAAAAAAEAAAADAAEAAAABAAEAAAADAAEAAAD/////AAADAAEAAAD//wIAAAADAAEAAAAAAAMAAAANAAIAAAD//wMAAAADAAEAAAD//wQAAAADAAEAAAD//wUAAAADAAEAAAD//wYAAAADAAEAAAD//wcAAAADAAEAAAD//wgAAAADAAEAAAAAAAcAAAADAAEAAAABAAcAAAADAAEAAAACAAcAAAADAAEAAAAAAAgAAAADAAEAAAABAAgAAAADAAEAAAACAAgAAAADAAEAAAADAAgAAAADAAEAAAAEAAgAAAADAAEAAAAFAAgAAAADAAEAAAAFAAcAAAADAAEAAAAFAAYAAAADAAEAAAAFAAUAAAADAAEAAAAFAAQAAAADAAEAAAAFAAMAAAADAAEAAAAFAAIAAAADAAEAAAAEAAIAAAANAAIAAAAEAAEAAAANAAIAAAAFAAEAAAADAAEAAAAFAAAAAAADAAEAAAAEAAAAAAANAAIAAAADAAAAAAANAAIAAAADAP//AAADAAEAAAAEAP//AAADAAEAAAAFAP//AAADAAEAAAAFAP7/AAADAAEAAAAEAAQAAAANAAIAAAAEAAMAAAANAAIAAAAEAAUAAAANAAIAAAAEAAYAAAANAAIAAAAEAAcAAAADAAEAAAADAAcAAAADAAEAAAADAAYAAAANAAIAAAADAAUAAAANAAIAAAADAAQAAAANAAIAAAADAAMAAAANAAIAAAADAAIAAAANAAIAAAADAAEAAAANAAIAAAACAAMAAAANAAIAAAACAAQAAAANAAIAAAACAAUAAAANAAIAAAACAAYAAAANAAIAAAABAAYAAAADAAEAAAABAAUAAAADAAEAAAAAAAQAAAANAAIAAAAAAAUAAAADAAEAAAAAAAYAAAADAAEAAAABAAQAAAANAAIAAAABAAMAAAANAAIAAAA=")
 tile_set = SubResource("TileSet_unf16")
 
-[node name="postac" parent="." instance=ExtResource("2_ut5r5")]
+[node name="postac" parent="." unique_id=159063582 instance=ExtResource("2_ut5r5")]
 light_mask = 0
 visibility_layer = 513
 position = Vector2(-29, -56)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=430525877]
+stream = ExtResource("3_ut5r5")
+volume_db = 6.868
+autoplay = true
