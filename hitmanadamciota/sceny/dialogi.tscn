@@ -1,31 +1,20 @@
-[gd_scene format=3 uid="uid://pb650vvdm6st"]
+[gd_scene load_steps=3 format=3 uid="uid://pb650vvdm6st"]
 
-[ext_resource type="Script" uid="uid://3nbscvcttclu" path="res://sceny/dialogi.gd" id="1_5iosn"]
+[ext_resource type="Script" uid="uid://db5tlad61w07q" path="res://sceny/dwaadw.gd" id="1_0kfhw"]
+[ext_resource type="Texture2D" uid="uid://c1n28d7n6mrok" path="res://assety/astery dating sim/Exports/Dialogue/DialogueContainer.png" id="2_0kfhw"]
 
-[node name="Node2D" type="Node2D" unique_id=1246557471]
-position = Vector2(422, 17)
+[node name="Node2D" type="CanvasLayer"]
+script = ExtResource("1_0kfhw")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2023983836]
-offset_left = 12.0
-offset_top = 332.0
-offset_right = 814.0
-offset_bottom = 612.0
-color = Color(0.31061712, 0.31061712, 0.3106171, 1)
+[node name="Label" type="Label" parent="."]
+offset_left = 39.0
+offset_top = 818.0
+offset_right = 1839.0
+offset_bottom = 1101.0
 
-[node name="Label" type="Label" parent="." unique_id=956293807]
-offset_left = 11.0
-offset_top = 332.0
-offset_right = 813.0
-offset_bottom = 615.0
-script = ExtResource("1_5iosn")
+[node name="DialogueContainer" type="Sprite2D" parent="."]
+position = Vector2(935, 946)
+texture = ExtResource("2_0kfhw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=242721239]
-position = Vector2(52, 206)
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=215752890]
-z_index = -1
-offset_left = 6.0
-offset_top = 320.0
-offset_right = 838.0
-offset_bottom = 620.0
-color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(884, 753)

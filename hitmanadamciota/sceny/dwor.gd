@@ -1,4 +1,5 @@
 extends Node2D
 
 func _ready() -> void:
-	MusicController.play_track("dwor")
+	Dialogi.gadanko1()
+	

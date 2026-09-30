@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="hitmanadamciota"
 run/main_scene="uid://bin12enohoyak"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://spirty/icon.svg"
 
 [audio]
@@ -29,6 +29,7 @@ Global="*res://skrypty/global.gd"
 Muzyka="*res://sceny/muzyka.tscn"
 Settings="*uid://c4kynmttb4qw0"
 MusicController="*uid://b2bv05q41gcf8"
+Dialogi="*res://sceny/dialogi.tscn"
 
 [display]
 
@@ -45,7 +46,7 @@ czlowiek=""
 
 [gui]
 
-theme/custom_font="uid://chmiwx22k8enq"
+theme/custom_font="uid://dm0g744782gi"
 
 [input]
 
