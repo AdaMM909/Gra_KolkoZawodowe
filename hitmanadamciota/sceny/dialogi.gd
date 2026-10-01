@@ -6,6 +6,7 @@ var x = "adam nie badz smutny"
 
 @onready var dialogi: Label = $Label
 @onready var zdjdial: Sprite2D = $Sprite2D
+@onready var tlo: Sprite2D = $tlo
 
 func konwersacja(ktogada: String, ikonka: String):
 	if ResourceLoader.exists(ikonka):

@@ -11,6 +11,8 @@ offset_left = 39.0
 offset_top = 818.0
 offset_right = 1839.0
 offset_bottom = 1101.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
 
 [node name="DialogueContainer" type="Sprite2D" parent="."]
 position = Vector2(935, 946)
@@ -18,3 +20,13 @@ texture = ExtResource("2_0kfhw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(884, 753)
+
+[node name="tlo" type="TextureRect" parent="."]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6

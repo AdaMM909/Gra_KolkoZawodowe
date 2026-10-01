@@ -29,7 +29,6 @@ Global="*res://skrypty/global.gd"
 Muzyka="*res://sceny/muzyka.tscn"
 Settings="*uid://c4kynmttb4qw0"
 MusicController="*uid://b2bv05q41gcf8"
-Dialogi="*res://sceny/dialogi.tscn"
 
 [display]
 
