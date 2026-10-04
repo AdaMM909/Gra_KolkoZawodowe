@@ -11,17 +11,25 @@ const BG_COURTYARD = "res://assety/Noraneko_Backgrounds_Old/Noraneko_Backgrounds
 
 # --- ŚCIEŻKI DO SPRAJTÓW POSTACI (SPRITES) ---
 const SPRITE_NONE = "res://sprites/empty.png" # Puste tło gdy brak postaci
-const SPRITE_IGOR = "res://sprites/igor.png"
-const SPRITE_ADAM = "res://sprites/adam.png"
-const SPRITE_PLOTKARZ = "res://sprites/plotkarz.png"
-const SPRITE_STASIU = "res://sprites/stasiu.png"
-const SPRITE_JAKUB = "res://sprites/jakub.png"
-const SPRITE_PRZYJACIEL = "res://sprites/przyjaciel.png"
-const SPRITE_NOWY = "res://sprites/nowy.png"
+const SPRITE_IGOR = "res://anime boyys/58b06fdfaf55347da5ede43db8616629-removebg-preview.png"
+const SPRITE_ADAM = "res://anime boyys/elegant-anime-girl-stockcake-removebg-preview.png"
+const SPRITE_PLOTKARZ = "res://anime boyys/Zrzut_ekranu_2026-10-04_120550-removebg-preview.png"
+const SPRITE_STASIU = "res://anime boyys/840ee3642d04dfd701eb05c3d6687557-removebg-preview.png"
+const SPRITE_JAKUB = "res://anime boyys/young-anime-girl-charming-smile-short-brown-hair-wearing-peach-sweater-digital-illustration-young-440237499-removebg-preview.png"
+const SPRITE_PRZYJACIEL = "res://anime boyys/Zrzut_ekranu_2026-10-04_120230-removebg-preview.png"
+const SPRITE_NOWY = "res://anime boyys/Zrzut_ekranu_2026-10-04_120320-removebg-preview.png"
+
+
+
+
+
+
+
+
 
 var krok = 0
 @onready var dialogi: Label = $Label
-@onready var zdjdial: Sprite2D = $Sprite2D
+@onready var zdjdial: TextureRect = $Sprite2D
 @onready var tlo: TextureRect = $tlo  # Zamieniono na TextureRect dla automatycznego skalowania teł
 
 var dialognumer = 0
@@ -207,7 +215,4 @@ func gadanko1():
 		
 	# ZAMKNIĘCIE DIALOGU
 	elif krok >= 67:
-		self.hide()
-		get_tree().paused = false
-		dialognumer = 2
-		krok = 0
+		get_tree().quit()
